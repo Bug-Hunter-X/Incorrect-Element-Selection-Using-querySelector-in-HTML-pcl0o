@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    //Incorrect way to select element, which should be document.getElementById("myDiv")
+    let divElement = document.querySelector("#myDiv"); 
+    if (divElement) {
+      divElement.style.display = "none";
+    } else {
+      console.error("Element not found");
+    }
+  </script>
+</body>
+</html>
